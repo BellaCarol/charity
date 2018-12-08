@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Let's help people in need!</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<button id="btn"> What is the time? </button>
+
+<p id="time"></p>
+<script>
+var btn = document.getElementById('btn');
+var time = Date();
+
+btn.addEventListener('click', function(){
+  document.getElementById('time').innerHTML = time;
+}); </script>
+
+<p id="case">
+In case you want to convert Fahrenheit into Celsius
+</p>
+
+<p id = "c"><input id="cels" onkeyup="convert('Celsius')"> degrees Celsius</p>
+
+<p id = "f"><input id="fahr" onkeyup="convert('Fahrenheit')"> degrees Fahrenheit</p> 
+
+<!--this should convert Celsius into Fahrenheit and the other way round-->
+
+<script>
+function convert(degree) {
+  var x;
+  if (degree == "Celsius") {
+    x = document.getElementById("cels").value * 9 / 5 + 32;
+    document.getElementById("fahr").value = Math.round(x);
+  } else {
+    x = (document.getElementById("fahr").value -32) * 5 / 9;
+    document.getElementById("cels").value = Math.round(x);
+  }
+}
+</script>
+
+
+<nav class = "actions">
+<a href="#">Donate</a>
+<a href="#">Our projects</a>
+<a href="#">Our mission</a>
+<a href="#">Photo gallery</a>
+<a href="#">Contact</a>
+<a href="#">About us</a>
+</nav>
+
+<div class = "box-1">
+
+
+
+<h1>Welcome to our website! </h1>
+
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+culpa qui officia deserunt mollit anim id est laborum.</p>
+<br>
+
+
+<div id ="image1">
+<img src = "./images/images.jpg">
+</div>
+<div id = "image2">
+<img src = "./images/charity-quote.jpg">
+</div>
+<div class = "categories">
+
+<h2> What we do </h2>
+
+<ul>
+
+<li>
+<a href="#">Making a connection between donors and people in need</a>
+ </li>
+
+<li>
+<a href="#">Fundraising</a>
+ </li>
+<li>
+<a href="#">Looking for people in need</a>
+ </li>
+<li>
+<a href="#">Clean water project</a>
+ </li>
+<li>
+<a href="#">Children-friendly charity projects</a>
+ </li>
+
+ </ul>
+</div>
+
+ </div>
+ 
+
+<form class= "my-form"> <br>
+<h2>Do you have questions, comments or suggestions? Fire away!</h2>
+	<div class="form-group">
+	<label>Name </label> <br>
+	<input type = "text" name = "name">
+	</div>
+	<div class = "form-group">
+	<label> Email </label> <br>
+	<input type = "text" name = "email">
+	</div>
+        <div class="form-group">
+	<label> Message </label> <br>
+	<textarea name = "message"></textarea>
+	</div>
+	<input class="button" type = "submit" value = "Submit" name= "">
+</form>
+</div>
+<div style = "margin-top: 500px;"> </div>
+
+
+</body>
+</html>
